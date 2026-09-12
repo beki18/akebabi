@@ -1,0 +1,152 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   Ethiopian Warm-Earth Design System for Akebabi (አካባቢ)
+   - Primary: Terracotta (#9C3A1A)  - from Ethiopian flag red family
+   - Accent:  Warm Gold (#C8862C)   - ochre / coffee tones
+   - Background: Warm Cream (#FAF6EE) - paper-like, easy on eyes
+   - Text:    Deep Brown (#1F1612)  - softer than pure black
+   ============================================================ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), "Noto Sans Ethiopic", sans-serif;
+  --font-mono: var(--font-geist-mono);
+  --font-serif: "Noto Serif", "Noto Serif SC", serif;
+  --font-amharic: "Noto Sans Ethiopic", "Noto Sans", sans-serif;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Warm cream background */
+  --background: oklch(0.972 0.018 75);
+  --foreground: oklch(0.18 0.012 30);   /* deep brown-black */
+  --card: oklch(0.985 0.012 75);        /* slightly lighter cream */
+  --card-foreground: oklch(0.18 0.012 30);
+  --popover: oklch(0.985 0.012 75);
+  --popover-foreground: oklch(0.18 0.012 30);
+  /* Primary = terracotta #9C3A1A */
+  --primary: oklch(0.46 0.155 30);
+  --primary-foreground: oklch(0.985 0.012 75);
+  /* Secondary = soft sand surface */
+  --secondary: oklch(0.94 0.018 75);
+  --secondary-foreground: oklch(0.18 0.012 30);
+  --muted: oklch(0.93 0.014 75);
+  --muted-foreground: oklch(0.45 0.025 50);  /* muted brown */
+  /* Accent = warm gold #C8862C */
+  --accent: oklch(0.68 0.13 70);
+  --accent-foreground: oklch(0.985 0.012 75);
+  --destructive: oklch(0.55 0.18 25);
+  --border: oklch(0.88 0.025 75);        /* soft sand border */
+  --input: oklch(0.88 0.025 75);
+  --ring: oklch(0.46 0.155 30);
+  --chart-1: oklch(0.46 0.155 30);       /* terracotta */
+  --chart-2: oklch(0.68 0.13 70);        /* gold */
+  --chart-3: oklch(0.55 0.09 145);       /* forest green */
+  --chart-4: oklch(0.5 0.08 250);        /* dusty blue */
+  --chart-5: oklch(0.4 0.04 30);         /* deep brown */
+  --sidebar: oklch(0.985 0.012 75);
+  --sidebar-foreground: oklch(0.18 0.012 30);
+  --sidebar-primary: oklch(0.46 0.155 30);
+  --sidebar-primary-foreground: oklch(0.985 0.012 75);
+  --sidebar-accent: oklch(0.94 0.018 75);
+  --sidebar-accent-foreground: oklch(0.18 0.012 30);
+  --sidebar-border: oklch(0.88 0.025 75);
+  --sidebar-ring: oklch(0.46 0.155 30);
+}
+
+.dark {
+  --background: oklch(0.18 0.012 30);
+  --foreground: oklch(0.965 0.012 75);
+  --card: oklch(0.24 0.014 30);
+  --card-foreground: oklch(0.965 0.012 75);
+  --popover: oklch(0.24 0.014 30);
+  --popover-foreground: oklch(0.965 0.012 75);
+  --primary: oklch(0.62 0.18 30);
+  --primary-foreground: oklch(0.985 0.012 75);
+  --secondary: oklch(0.30 0.014 30);
+  --secondary-foreground: oklch(0.965 0.012 75);
+  --muted: oklch(0.30 0.014 30);
+  --muted-foreground: oklch(0.72 0.014 60);
+  --accent: oklch(0.74 0.14 70);
+  --accent-foreground: oklch(0.18 0.012 30);
+  --destructive: oklch(0.68 0.20 25);
+  --border: oklch(0.35 0.014 30);
+  --input: oklch(0.35 0.014 30);
+  --ring: oklch(0.62 0.18 30);
+  --sidebar: oklch(0.24 0.014 30);
+  --sidebar-foreground: oklch(0.965 0.012 75);
+  --sidebar-primary: oklch(0.62 0.18 30);
+  --sidebar-primary-foreground: oklch(0.985 0.012 75);
+  --sidebar-accent: oklch(0.30 0.014 30);
+  --sidebar-accent-foreground: oklch(0.965 0.012 75);
+  --sidebar-border: oklch(0.35 0.014 30);
+  --sidebar-ring: oklch(0.62 0.18 30);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  /* Hide scrollbars on horizontal scroll containers but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  /* Custom scrollbar for vertical lists */
+  .scrollbar-soft::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-soft::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-soft::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+  }
+}
