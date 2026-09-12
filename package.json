@@ -56,7 +56,8 @@
     "zod": "^3.24.1",
     "@hookform/resolvers": "^5.1.1"
   },
-  "devDependencies": {
+    "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
